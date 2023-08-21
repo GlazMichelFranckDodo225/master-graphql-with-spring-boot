@@ -1,15 +1,16 @@
 package com.dgmf.service;
 
+import com.dgmf.dto.RequestBookDTO;
+import com.dgmf.dto.ResponseBookDTO;
 import com.dgmf.entity.Book;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface BookService {
     // Creates a Book
-    Book createBook(Book book);
+    Book createBook(RequestBookDTO book);
     // Get all the Books
-    List<Book> getAllBooks();
+    List<ResponseBookDTO> getAllBooks();
     // Get a single Book
-    Book getBook(Long id);
+    ResponseBookDTO getBook(Long id);
 }
